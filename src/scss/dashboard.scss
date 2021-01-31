@@ -1,30 +1,26 @@
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 .db {
+
   &__header {
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
+    height: $db-header-height;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #fff;
     box-shadow: 0 2px 5px 2px rgba(60, 64, 67, 0.15);
     z-index: 1000;
-    height: $db-header-height;
   }
 
   &__new {
     margin-top: $db-header-height;
-    padding: 1rem;
+    padding: 1.5rem;
     background: #dadce0;
-  }
-
-  &__view {
-    max-width: 1000px;
-    margin: 0 auto;
   }
 
   &__create {
@@ -48,6 +44,11 @@
     }
   }
 
+  &__view {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
   &__table {
     padding: 1rem;
   }
@@ -59,11 +60,11 @@
     font-weight: 500;
     font-size: 16px;
     margin-bottom: 10px;
-    padding: 0 14px 0 16px;
+    padding: 0 12px;
   }
 
   &__list {
-    @include clear-list();
+    @include clear-list;
   }
 
   &__record {
@@ -89,4 +90,5 @@
       }
     }
   }
+
 }
